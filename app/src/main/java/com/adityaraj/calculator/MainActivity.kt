@@ -2,9 +2,11 @@ package com.adityaraj.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import net.objecthunter.exp4j.Expression
 import net.objecthunter.exp4j.ExpressionBuilder
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,21 +81,25 @@ class MainActivity : AppCompatActivity() {
             evaluateExpression("%", clear = true)
         }
 
-        //clr.setOnLongClickListener{
-        //   et.text = ""
-        //  rslt.text = ""
-        // }
+        clr.setOnLongClickListener{
+            clear_all()
+            true
+         }
 
         equal.setOnClickListener {
             val text = et.text.toString()
             val expression = ExpressionBuilder(text).build()
 
             val result = expression.evaluate()
+            val df = DecimalFormat("#.#########")
+            df.roundingMode = RoundingMode.CEILING
+
+
             val longResult = result.toLong()
             if (result == longResult.toDouble()) {
-                rslt.text = longResult.toString()
+                rslt.text = df.format(longResult).toString()
             } else {
-                rslt.text = result.toString()
+                rslt.text = df.format(result).toString()
             }
         }
 
@@ -116,6 +122,10 @@ class MainActivity : AppCompatActivity() {
             et.append(string)
             rslt.text = ""
         }
+    }
+    fun clear_all() {
+        et.text=""
+        rslt.text = ""
     }
 
 }
