@@ -3,8 +3,10 @@ package com.adityaraj.calculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import net.objecthunter.exp4j.ExpressionBuilder
+import java.math.BigDecimal
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
@@ -87,20 +89,17 @@ class MainActivity : AppCompatActivity() {
          }
 
         equal.setOnClickListener {
-            val text = et.text.toString()
-            val expression = ExpressionBuilder(text).build()
+            try{
+                val text = et.text.toString()
+                val expression = ExpressionBuilder(text).build()
 
-            val result = expression.evaluate()
-            val df = DecimalFormat("#.#########")
-            df.roundingMode = RoundingMode.CEILING
-
-
-            val longResult = result.toLong()
-            if (result == longResult.toDouble()) {
-                rslt.text = df.format(longResult).toString()
-            } else {
-                rslt.text = df.format(result).toString()
+                val result = expression.evaluate()
+                rslt.text = (result).toDouble().toString()
+            }catch (e:Exception){
+                Toast.makeText(this,"INVALID ARITHMETIC INPUT", Toast.LENGTH_LONG).show()
             }
+
+
         }
 
         clr.setOnClickListener {

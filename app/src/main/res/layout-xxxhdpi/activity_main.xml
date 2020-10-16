@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/et"
             android:layout_width="match_parent"
-            android:layout_height="67dp"
+            android:layout_height="91dp"
             android:paddingTop="15dp"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/rslt"
             android:layout_width="match_parent"
-            android:layout_height="99dp"
+            android:layout_height="108dp"
             android:isScrollContainer="false"
             android:maxLines="1"
             android:paddingTop="15dp"
@@ -62,7 +62,7 @@
                     android:longClickable="true"
                     android:text="⌫"
                     android:textColor="#FFFFFF"
-                    android:textSize="30sp" />
+                    android:textSize="50sp" />
 
                 <Button
                     android:id="@+id/root"
