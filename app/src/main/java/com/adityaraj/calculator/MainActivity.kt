@@ -1,5 +1,6 @@
 package com.adityaraj.calculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         et.text = ""
         rslt.text = ""
+        var counter = 0
+        var counters  = 1
+        val bracket = "("
+        val brackets = ")"
+
+
 
 
         bt1.setOnClickListener {
@@ -80,14 +87,26 @@ class MainActivity : AppCompatActivity() {
             evaluateExpression("^", clear = true)
         }
         root.setOnClickListener {
-            evaluateExpression("%", clear = true)
+            evaluateExpression("(", clear = true)
+            Toast.makeText(this,"FOR CLOSING BRACKET ')',LONG PRESS () BUTTON ", Toast.LENGTH_LONG).show()
+
         }
+        root.setOnLongClickListener{
+            evaluateExpression(")", clear = true)
+           // Toast.makeText(this,"LONG PRESS () FOR CLOSING BRACKET')'", Toast.LENGTH_LONG).show()
+            true
+
+        }
+
 
         clr.setOnLongClickListener{
             clear_all()
             true
-         }
 
+        }
+
+
+        var history = arrayOf("history")
         equal.setOnClickListener {
             try{
                 val text = et.text.toString()
@@ -95,9 +114,12 @@ class MainActivity : AppCompatActivity() {
 
                 val result = expression.evaluate()
                 rslt.text = (result).toDouble().toString()
+                history = history.plus(result.toString())
             }catch (e:Exception){
                 Toast.makeText(this,"INVALID ARITHMETIC INPUT", Toast.LENGTH_LONG).show()
             }
+
+
 
 
         }

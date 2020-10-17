@@ -72,7 +72,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
                     android:backgroundTint="#FF1A75"
-                    android:text="%"
+                    android:text="( )"
                     android:textColor="#00E58A"
                     android:textSize="50sp" />
 

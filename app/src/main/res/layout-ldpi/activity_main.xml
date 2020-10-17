@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/et"
             android:layout_width="match_parent"
-            android:layout_height="27dp"
+            android:layout_height="35dp"
             android:paddingTop="15dp"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/rslt"
             android:layout_width="match_parent"
-            android:layout_height="29dp"
+            android:layout_height="36dp"
             android:isScrollContainer="false"
             android:maxLines="1"
             android:paddingTop="15dp"

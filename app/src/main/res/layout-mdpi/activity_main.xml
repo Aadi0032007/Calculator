@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/et"
             android:layout_width="match_parent"
-            android:layout_height="92dp"
+            android:layout_height="41dp"
             android:paddingTop="15dp"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/rslt"
             android:layout_width="match_parent"
-            android:layout_height="99dp"
+            android:layout_height="43dp"
             android:isScrollContainer="false"
             android:maxLines="1"
             android:paddingTop="15dp"
@@ -54,7 +54,7 @@
                 <Button
                     android:id="@+id/clr"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -67,19 +67,19 @@
                 <Button
                     android:id="@+id/root"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
                     android:backgroundTint="#FF1A75"
-                    android:text="%"
+                    android:text="( )"
                     android:textColor="#00E58A"
                     android:textSize="50sp" />
 
                 <Button
                     android:id="@+id/power"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -91,7 +91,7 @@
                 <Button
                     android:id="@+id/divide"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_corners"
@@ -108,7 +108,7 @@
                 <Button
                     android:id="@+id/bt7"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -120,7 +120,7 @@
                 <Button
                     android:id="@+id/bt8"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -132,7 +132,7 @@
                 <Button
                     android:id="@+id/bt9"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -144,7 +144,7 @@
                 <Button
                     android:id="@+id/multiply"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_corners"
@@ -163,7 +163,7 @@
                 <Button
                     android:id="@+id/bt4"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -175,7 +175,7 @@
                 <Button
                     android:id="@+id/bt5"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -187,7 +187,7 @@
                 <Button
                     android:id="@+id/bt6"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -199,7 +199,7 @@
                 <Button
                     android:id="@+id/subs"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_corners"
@@ -216,7 +216,7 @@
                 <Button
                     android:id="@+id/bt1"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -228,7 +228,7 @@
                 <Button
                     android:id="@+id/bt2"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -240,7 +240,7 @@
                 <Button
                     android:id="@+id/bt3"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/circle_button"
@@ -252,7 +252,7 @@
                 <Button
                     android:id="@+id/add"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_corners"
@@ -269,7 +269,7 @@
                 <Button
                     android:id="@+id/dot"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="0"
                     android:background="@drawable/circle_button"
@@ -281,7 +281,7 @@
                 <Button
                     android:id="@+id/bt0"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="0"
                     android:background="@drawable/circle_button"
@@ -293,7 +293,7 @@
                 <Button
                     android:id="@+id/equal"
                     android:layout_width="wrap_content"
-                    android:layout_height="93dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="1.5pt"
                     android:layout_weight="0.8"
                     android:background="@drawable/circle_button"
