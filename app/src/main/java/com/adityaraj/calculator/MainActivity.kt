@@ -65,29 +65,71 @@ class MainActivity : AppCompatActivity() {
         }
 
         add.setOnClickListener {
-            evaluateExpression("+", clear = true)
+            if (rslt.text.isEmpty()){
+                evaluateExpression("+", clear = true)
+            }else{
+                et.text = ""
+                evaluateExpression(rslt.text.toString(),clear = true)
+                evaluateExpression("+", clear = true)
+            }
+
         }
 
         subs.setOnClickListener {
-            evaluateExpression("-", clear = true)
+
+            if (rslt.text.isEmpty()){
+                evaluateExpression("-", clear = true)
+            }else{
+                et.text = ""
+                evaluateExpression(rslt.text.toString(),clear = true)
+                evaluateExpression("-", clear = true)
+            }
         }
 
         multiply.setOnClickListener {
-            evaluateExpression("*", clear = true)
+
+            if (rslt.text.isEmpty()){
+                evaluateExpression("*", clear = true)
+            }else{
+                et.text = ""
+                evaluateExpression(rslt.text.toString(),clear = true)
+                evaluateExpression("*", clear = true)
+            }
         }
 
         divide.setOnClickListener {
-            evaluateExpression("/", clear = true)
+
+            if (rslt.text.isEmpty()){
+                evaluateExpression("/", clear = true)
+            }else{
+                et.text = ""
+                evaluateExpression(rslt.text.toString(),clear = true)
+                evaluateExpression("/", clear = true)
+            }
         }
 
         dot.setOnClickListener {
             evaluateExpression(".", clear = true)
         }
         power.setOnClickListener {
-            evaluateExpression("^", clear = true)
+
+            if (rslt.text.isEmpty()){
+                evaluateExpression("^", clear = true)
+            }else{
+                et.text = ""
+                evaluateExpression(rslt.text.toString(),clear = true)
+                evaluateExpression("^", clear = true)
+            }
         }
         root.setOnClickListener {
-            evaluateExpression("(", clear = true)
+
+            if (rslt.text.isEmpty()){
+                evaluateExpression("(", clear = true)
+            }else{
+                et.text = ""
+                evaluateExpression(rslt.text.toString(),clear = true)
+                evaluateExpression("(", clear = true)
+            }
             Toast.makeText(this,"FOR CLOSING BRACKET ')',LONG PRESS () BUTTON ", Toast.LENGTH_LONG).show()
 
         }
@@ -109,9 +151,8 @@ class MainActivity : AppCompatActivity() {
         var history = arrayOf("history")
         equal.setOnClickListener {
             try{
-                val text = et.text.toString()
+                var text = et.text.toString()
                 val expression = ExpressionBuilder(text).build()
-
                 val result = expression.evaluate()
                 rslt.text = (result).toDouble().toString()
                 history = history.plus(result.toString())
